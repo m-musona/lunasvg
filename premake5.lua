@@ -21,7 +21,7 @@ project "plutovg"
 
     defines
     {
-        "PLUTOVG_STATIC",
+        "PLUTOVG_BUILD_STATIC",
         "_CRT_SECURE_NO_WARNINGS",
         "_USE_MATH_DEFINES"
     }
@@ -62,12 +62,14 @@ project "lunasvg"
 
     defines
     {
-        "LUNASVG_STATIC",
+        "LUNASVG_BUILD_STATIC",
+        "PLUTOVG_BUILD_STATIC",
         "_CRT_SECURE_NO_WARNINGS"
     }
 
     links
     {
+        "freetype",
         "plutovg"
     }
 
